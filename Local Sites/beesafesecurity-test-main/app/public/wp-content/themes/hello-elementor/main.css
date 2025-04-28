@@ -298,7 +298,10 @@ main > .has-global-padding {
 }
 
 .hero-container img {
-  height: 100% !important;
+  /* height: 100% !important; */
+  height: 70vh !important;
+  width: 100% !important;
+  object-fit: cover !important;
 }
 
 /* tweak */
@@ -321,6 +324,7 @@ main > .has-global-padding {
 @media (min-width: 769px) {
   .hero-container > div.e-con-boxed:first-child {
     width: 43%;
+    height: 70vh !important;
   }
 
   .hero-container > div.e-con-boxed:last-child {
