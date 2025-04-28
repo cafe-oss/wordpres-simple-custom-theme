@@ -1,0 +1,501 @@
+/*
+Theme Name: Twenty Twenty-Five
+Theme URI: https://wordpress.org/themes/twentytwentyfive/
+Author: the WordPress team
+Author URI: https://wordpress.org
+Description: Twenty Twenty-Five emphasizes simplicity and adaptability. It offers flexible design options, supported by a variety of patterns for different page types, such as services and landing pages, making it ideal for building personal blogs, professional portfolios, online magazines, or business websites. Its templates cater to various blog styles, from text-focused to image-heavy layouts. Additionally, it supports international typography and diverse color palettes, ensuring accessibility and customization for users worldwide.
+Requires at least: 6.7
+Tested up to: 6.8
+Requires PHP: 7.2
+Version: 1.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentytwentyfive
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, news
+*/
+
+/*
+ * Link styles
+ * https://github.com/WordPress/gutenberg/issues/42319
+ */
+
+
+a {
+	text-decoration-thickness: 1px !important;
+	text-underline-offset: .1em;
+}
+
+/* Focus styles */
+:where(.wp-site-blocks *:focus) {
+	outline-width: 2px;
+	outline-style: solid;
+}
+
+
+
+/* Increase the bottom margin on submenus, so that the outline is visible. */
+.wp-block-navigation .wp-block-navigation-submenu .wp-block-navigation-item:not(:last-child) {
+	margin-bottom: 3px;
+}
+
+/* Increase the outline offset on the parent menu items, so that the outline does not touch the text. */
+.wp-block-navigation .wp-block-navigation-item .wp-block-navigation-item__content {
+	outline-offset: 4px;
+}
+
+/* Remove outline offset from the submenus, otherwise the outline is visible outside the submenu container. */
+.wp-block-navigation .wp-block-navigation-item ul.wp-block-navigation__submenu-container .wp-block-navigation-item__content {
+	outline-offset: 0;
+}
+
+/*
+ * Progressive enhancement to reduce widows and orphans
+ * https://github.com/WordPress/gutenberg/issues/55190
+ */
+h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
+	text-wrap: pretty;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+
+/*
+ * Change the position of the more block on the front, by making it a block level element.
+ * https://github.com/WordPress/gutenberg/issues/65934
+*/
+.more-link {
+	display: block;
+}
+
+/* custom code */
+
+.entry-content > .elementor{
+	overflow: hidden !important;
+}
+
+.container h1, 
+.container h2,
+.container h3, 
+.container h4,
+.container h5, 
+.container h6,
+.elementor-counter-title{
+	font-family: 'Satoshi', sans-serif !important;
+	line-height: 1.25 !important;
+    font-weight: 400 !important;
+}
+
+.slide-title{
+	font-family: 'Satoshi', sans-serif !important;
+	line-height: 1.25 !important;
+    font-weight: 400 !important;
+	font-size: 1.5rem !important;
+	text-align: left !important;
+}
+
+.slide-para{
+	font-family: 'Work Sans', sans-serif !important;
+	font-size: 1.5rem !important;
+}
+
+.container h1{
+	font-size: 3.5rem !important;
+}
+
+.container h2{
+    font-size: 3rem !important;
+}
+
+.container h3,
+.elementor-counter-title{
+    font-size: 2rem !important;
+}
+
+.container p, 
+.container span, 
+.container caption, 
+.container blockquote, 
+.container figcaption, 
+.container ul li, 
+.container ol li{
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1.5rem;
+}
+
+
+ul, ol{
+	list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li, ol li{
+    margin: 0;
+    padding: 0;
+}
+
+main > .has-global-padding{
+	padding-left:  0;
+	padding-right: 0;
+}
+
+.elementor{
+	margin: 0 !important;
+	max-width: 100%;
+}
+
+.container:not(.hero-container){
+	max-width: 1200px;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+.container:not(.full-width){
+	max-width: 1200px;
+
+}
+
+.container.full-width{
+	max-width: 100%;
+}
+
+.container{
+	/* border: 1px solid #0f0602; */
+	width: 100%;
+}
+
+.container:not(.hero-container) > .e-con-boxed{
+	position: relative;
+    height: 100%;
+}
+
+.container:not(.hero-container) > div > .e-con-inner{
+	padding: 1rem;
+}
+
+@media(min-width: 769px){
+	.container{
+		flex-direction: row !important;
+	}
+}
+
+@media(max-width: 768px){
+	.container{
+		flex-direction: column !important;
+	}
+}
+
+/* button */
+.custom-button-container > .elementor-widget-container{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	gap: 2rem;
+}
+
+/* home */
+.hero-container{
+	gap: 0 !important;
+	padding: 0;
+	max-width: 100%;
+}
+
+/* tweak */
+.elementor-element > .e-con-boxed{
+	margin: 0;
+	padding: 0;
+}
+
+.e-con-boxed > .e-con-inner{
+	/* border: 1px solid red; */
+	padding-top: 0;
+	padding-bottom: 0;
+	margin: 0;
+	max-width: 100%;
+	height: 100%;
+}
+
+/* end of tweak */
+
+@media(min-width: 769px){
+	.hero-container > div.e-con-boxed:first-child{
+		width: 43%;
+	}
+	.hero-container > div.e-con-boxed:last-child{
+		width: 57%;
+	}
+}
+
+.hero-text-container{
+	padding: 0;
+}
+
+.hero-text-container > .e-con-inner{
+	padding-left: 3rem;
+	padding-right: 3rem;
+	justify-content: center !important;
+}
+
+/* home hero overlay info */
+
+.hero-overlay-info{
+	padding: 0;
+	max-width: 100%;
+}
+
+@media(min-width: 769px){
+	.hero-overlay-info{
+		/* margin-top: -8rem;/ */
+	}
+}
+
+.hero-overlay-info-list{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	justify-content: space-between;
+	/* padding: 0 1.7rem; */
+}
+@media (max-width: 768px){
+	.hero-overlay-info-list{
+		flex-direction: column;
+	}
+}
+
+.hero-overlay-info-list > li{
+	max-width: 30%;
+}
+@media (max-width: 768px){
+	.hero-overlay-info-list > li{
+		max-width: 100%;
+	}
+}
+
+.hero-overlay-info-list > li > div{
+	display: flex;
+	align-items: center;
+	/* gap: 1rem; */
+}
+
+.hero-overlay-info-list svg{
+	margin-left: -8px;
+}
+
+.hero-overlay-info-list h3{
+	margin: 0;
+}
+
+/* default image with text col */
+/* .default-text-col,
+.default-image-col{
+
+} */
+
+/* .default-text-col > .e-con-inner{
+	justify-content: center !important;
+} */
+
+.default-row{
+	flex-direction: column !important;
+}
+
+@media(min-width: 769px){
+	.default-text-col1 > .e-con-inner{
+		max-width: 50%;
+	}
+
+	.default-text-col2 > .e-con-inner{
+		max-width: 70%;
+		margin-left: auto;
+	}
+}
+
+@media (max-width: 768px){
+	.reverse-mobile{
+		flex-direction: column-reverse !important;
+	}
+}
+
+/* services */
+
+.service-container{
+	display: flex;
+	justify-content: center;
+	gap: 24px;
+}
+
+.service-wrapper{
+	border: solid 0.5px #0f0602;
+	position: relative;
+}
+
+.service-image,
+.service-image img{
+	width: 100%;
+	height: 100%;
+}
+
+.service-image img{
+	object-fit: cover;
+}
+
+.service-texts{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 1rem;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	background-image: linear-gradient(#10101000 50%, #101010 85%);
+}
+
+@media (min-width: 992px){
+	.service-wrapper{
+		width: 30%;
+	}
+}
+
+@media (min-width: 769px) and (max-width: 991px){
+	.service-wrapper{
+		width: 500px;
+	}
+
+	.service-container{
+		flex-wrap: wrap;
+	}
+}
+
+
+@media (max-width: 768px){
+	.service-container{
+		flex-direction: column;
+	}
+}
+
+/* counter */
+.counter-col > .e-con-inner {
+    flex-direction: row !important;
+    justify-content: space-evenly !important;
+}
+
+@media (max-width: 564px){
+	.counter-col > .e-con-inner{
+		flex-direction: column !important;
+	}
+}
+
+.elementor-counter-number,
+.elementor-counter-number-suffix{
+	font-size: 1em !important;
+} 
+
+/* image carousel*/
+.swiper {
+	width: 100%;
+	height: 100%;
+  }
+
+.swiper-wrapper{
+	gap: 24px;
+}
+
+/* .swiper-slide{
+    padding-right: 0 !important;
+	border: solid 0.5px #0f0602 !important;
+} */
+.swiper-slide {
+	border: solid 0.5px #0f0602 !important;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+
+/* .swiper-container{
+    position: relative;
+    overflow: clip !important;
+    width: 100% !important;
+    margin: 0 auto;
+} */
+.swiper-container{
+	display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+}
+
+@media (max-width: 1024px){
+    .swiper-container{
+        width: 90vw !important;
+    }
+}
+
+.slide-container{
+	padding: 20px 24px 24px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+}
+
+.slide-container >img{
+	width: 80px;
+}
+
+.swiper-scrollbar{
+     display: none;
+}
+
+.swiper-top-container,
+.swiper-button-container{
+	display: flex;
+}
+
+.swiper-top-container{
+	justify-content: space-between;
+}
+
+.swiper-button-container{
+	align-items: center;
+	gap: 16px;
+}
+.swiper-button-next,
+.swiper-button-prev{
+	position: relative !important;
+	left: unset !important;
+	top: unset !important;
+	bottom: unset !important;
+	right: unset !important;
+	margin: 0 !important;
+	
+}
+
+.swiper-button-next:after,.swiper-button-prev:after{
+	font-size: 40px !important;
+}
+
+.swiper-pagination span.swiper-pagination-bullet{
+    opacity: 1 !important;
+    background: #E1EED0 !important;
+}
+.swiper-pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background: #88BB45 !important;
+}
+
+/* footer banner */
+.footer-banner > div > .e-con-inner{
+	gap: 0;
+}
+
+@media(min-width: 769px){
+	.footer-banner > .e-con-boxed:last-child .elementor-widget-container{
+		flex-wrap: nowrap !important;
+	}
+
+	.footer-banner h2.elementor-heading-title{
+		width: 60%;
+	}
+}
