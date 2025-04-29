@@ -85,6 +85,10 @@ p {
   }
 }
 
+.service-texts h3 {
+  margin: 0 !important;
+}
+
 .custom-button > a,
 .container p,
 .container span,
@@ -534,12 +538,12 @@ main > .has-global-padding {
   justify-content: center;
   align-items: center;
   margin-right: 0 !important;
-  height: 555px !important;
+  height: 400px !important;
 }
 
-@media (min-width: 769px) and (max-width: 830px) {
+@media (min-width: 769px) and (max-width: 1150px) {
   .swiper-slide {
-    height: 627px !important;
+    height: 500px !important;
   }
 }
 
