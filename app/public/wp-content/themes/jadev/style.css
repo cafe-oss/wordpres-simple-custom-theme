@@ -778,3 +778,18 @@ div.comment:first-of-type {
 .comment-reply-title small a:hover {
 	text-decoration: underline;
 }
+
+.custom-container{
+    padding: 70px 15px;
+    
+}
+.object-fit-cover{
+    object-fit: cover;
+}
+
+.card-img-top{
+    height: 40%;
+}
+.card-body{
+    height: 60%;
+}

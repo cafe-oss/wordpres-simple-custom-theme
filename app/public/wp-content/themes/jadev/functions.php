@@ -3,9 +3,12 @@
 add_filter('get_the_archive_title', function(){
     if(is_post_type_archive('our_blogs')){
         $title = "Blogs";
+        return $title;
+    }elseif(is_post_type_archive('our_services')){
+        $title = "Services";
+        return $title;
     }
-
-    return $title;
+    
 });
 
 function jadev_menu()
