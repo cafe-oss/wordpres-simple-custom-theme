@@ -1,23 +1,22 @@
-<?php
-    get_header();
-?>
+<?php get_header(); ?>
 
-        <article class="content px-3 py-5 p-md-5">
-            <?php
-                if(have_posts()){
-                    while(have_posts()){
-                        the_post();
-                    
-                        get_template_part( 'template-parts/content', 'archive' );
+    <main class="px-3 px-md-5">
+        <div class='container'>
+            <div class="custom-container">
+                <?php
+                    if(have_posts()){
+                        while(have_posts()){
+                            the_post();
+                        
+                            get_template_part( 'template-parts/contents/content', 'archive' );
+                        }
                     }
-                }
-            ?>
-
+                ?>
+            </div>
             <?php
                 the_posts_pagination();
             ?>
-        </article>
+        </div>
+    </main>
 
-<?php
-    get_footer();
-?>
+<?php get_footer(); ?>

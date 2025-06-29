@@ -1,0 +1,67 @@
+my-theme/
+├── # Core WordPress Templates
+├── index.php                     ✅
+├── header.php                    ✅
+├── footer.php                    ✅
+├── front-page.php                ✅
+├── functions.php                 ✅
+├── style.css                     ⚠️ (required for theme recognition)
+├── screenshot.png                ⚠️ (theme screenshot)
+├── 
+├── # Page Templates
+├── page.php                      ✅
+├── single.php                    ✅
+├── archive.php                   ✅
+├── search.php                    ⚠️ (recommended)
+├── 404.php                       ✅
+├── comments.php                  ✅
+├── 
+├── # Custom Post Type Templates
+├── single-our_services.php       ✅
+├── archive-our_services.php      ✅
+├── single-blogs.php              ✅
+├── archive-blogs.php             ⚠️ (if needed)
+├── 
+├── # Assets
+├── assets/                       ⚠️ (recommended)
+│   ├── css/
+│   │   ├── style.css
+│   │   └── admin.css
+│   ├── js/
+│   │   ├── main.js
+│   │   └── admin.js
+│   └── images/
+├── 
+├── # PHP Includes
+├── inc/                          ⚠️ (recommended)
+│   ├── theme-setup.php
+│   ├── template-functions.php
+│   ├── customizer.php
+│   └── enqueue-scripts.php
+├── 
+├── # Template Parts
+└── template-parts/               ✅
+    ├── contents/                 ✅
+    │   ├── content-article.php           ✅ (blog single)
+    │   ├── content-services.php          ✅ (service single)
+    │   ├── content-page.php              ✅ (page content)
+    │   ├── content-archive.php           ✅ (generic archive)
+    │   ├── content-archive-blog.php      ⚠️ (blog archive items)
+    │   ├── content-archive-service.php   ⚠️ (service archive items)
+    │   └── content-search.php            ⚠️ (search results)
+    │
+    ├── components/               ✅
+    │   ├── service-card.php              ✅
+    │   ├── two-column.php                ✅
+    │   ├── button.php                    ⚠️ (recommended)
+    │   ├── pagination.php                ⚠️ (recommended)
+    │   └── breadcrumb.php                ⚠️ (optional)
+    │
+    ├── sections/                 ✅
+    │   ├── services-section.php          ✅
+    │   ├── hero-section.php              ⚠️ (recommended)
+    │   └── cta-section.php               ⚠️ (optional)
+    │
+    └── layout/                   ⚠️ (optional)
+        ├── header-minimal.php
+        └── footer-simple.php
