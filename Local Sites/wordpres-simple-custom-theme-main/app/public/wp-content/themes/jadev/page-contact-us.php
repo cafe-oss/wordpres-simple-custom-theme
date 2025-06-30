@@ -1,0 +1,18 @@
+<?php get_header(); ?>
+
+<main class="px-3 px-md-5">
+    <div class='container'>
+        <?php
+        $two_column_text_text_section = get_field('two_column_text_text_section');
+        if ($two_column_text_text_section) {
+            get_template_part('template-parts/components/two-column-text-text', null, [
+                'section_data' => $two_column_text_text_section,
+                'reverse_class' => 'flex-column-reverse flex-md-row',
+                'additional_class_col2' => 'h-100 justify-content-center p-5'
+            ]);
+        }
+        ?>
+    </div>
+</main>
+
+<?php get_footer(); ?>
