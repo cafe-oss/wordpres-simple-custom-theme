@@ -1,0 +1,18 @@
+[07-Jul-2025 06:36:57 UTC] PHP Warning:  require_once(C:\Users\User\Local Sites\simple-timber-project-main\app\public\wp-content\themes\timber-jadev/vendor/autoload.php): Failed to open stream: No such file or directory in C:\Users\User\Local Sites\simple-timber-project-main\app\public\wp-content\themes\timber-jadev\functions.php on line 9
+[07-Jul-2025 06:36:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\User\Local Sites\simple-timber-project-main\app\public\wp-content\themes\timber-jadev/vendor/autoload.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\User\Local Sites\simple-timber-project-main\app\public\wp-content\themes\timber-jadev\functions.php:9
+Stack trace:
+#0 C:\Users\User\Local Sites\simple-timber-project-main\app\public\wp-settings.php(695): include()
+#1 C:\Users\User\Local Sites\simple-timber-project-main\app\public\wp-config.php(103): require_once('C:\\Users\\User\\L...')
+#2 C:\Users\User\Local Sites\simple-timber-project-main\app\public\wp-load.php(50): require_once('C:\\Users\\User\\L...')
+#3 C:\Users\User\Local Sites\simple-timber-project-main\app\public\wp-cron.php(46): require_once('C:\\Users\\User\\L...')
+#4 {main}
+  thrown in C:\Users\User\Local Sites\simple-timber-project-main\app\public\wp-content\themes\timber-jadev\functions.php on line 9
+[07-Jul-2025 06:45:54 UTC] PHP Warning:  require_once(C:\Users\User\Local Sites\simple-timber-project-main\app\public\wp-content\themes\timber-jadev/vendor/autoload.php): Failed to open stream: No such file or directory in C:\Users\User\Local Sites\simple-timber-project-main\app\public\wp-content\themes\timber-jadev\functions.php on line 9
+[07-Jul-2025 06:45:54 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\User\Local Sites\simple-timber-project-main\app\public\wp-content\themes\timber-jadev/vendor/autoload.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\User\Local Sites\simple-timber-project-main\app\public\wp-content\themes\timber-jadev\functions.php:9
+Stack trace:
+#0 C:\Users\User\Local Sites\simple-timber-project-main\app\public\wp-settings.php(695): include()
+#1 C:\Users\User\Local Sites\simple-timber-project-main\app\public\wp-config.php(103): require_once('C:\\Users\\User\\L...')
+#2 C:\Users\User\Local Sites\simple-timber-project-main\app\public\wp-load.php(50): require_once('C:\\Users\\User\\L...')
+#3 C:\Users\User\Local Sites\simple-timber-project-main\app\public\wp-cron.php(46): require_once('C:\\Users\\User\\L...')
+#4 {main}
+  thrown in C:\Users\User\Local Sites\simple-timber-project-main\app\public\wp-content\themes\timber-jadev\functions.php on line 9
